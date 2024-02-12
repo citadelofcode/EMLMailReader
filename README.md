@@ -31,7 +31,7 @@ Here's a sample code to leverage **EMLMailReader** in parsing an EML file and ex
 
 The above code will print a JSON like the one given below.
 
-![The JSON object returned as result.](https://github.com/maheshkumaarbalaji/EMLMailReader/assets/README/json-object.jpeg)
+![The JSON object returned as result.](/assets/README/json-object.jpeg)
 
 ## Modules Used
 
