@@ -1,20 +1,14 @@
 ## Project Description
 
----
-
 A Python library designed to analyze EML files and to extract details and attachments contained within. It captures various information from the email, such as attachments, sender address, recipient address, subject, body, and a comprehensive list of all headers in the EML file. The parsed information is exportable as a JSON object, and attachments can be conveniently downloaded to a specified local directory.
 
 ## Table of Contents
-
----
 
 - [Example Usage](https://github.com/maheshkumaarbalaji/EMLMailReader#example-usage)
 - [Modules Used](https://github.com/maheshkumaarbalaji/EMLMailReader#modules-used)
 - [Documentation](https://github.com/maheshkumaarbalaji/EMLMailReader#documentation)
 
 ## Example Usage
-
----
 
 Here's a sample code to leverage **EMLMailReader** in parsing an EML file and extracting information contained within.
 
@@ -64,8 +58,6 @@ In this context, the term "COMPLETE_EML_FILE_PATH" indicates the complete path o
 
 ## Modules Used
 
----
-
 Given below are the list of all the modules used in the *EMLMailReader* library.
 
 - **os** - To perform operating system file path manipulations.
@@ -78,9 +70,7 @@ All modules mentioned above are present in the Standard Python library and thus,
 
 ## Documentation
 
----
-
-This section showcases the key classes employed in the library for handling the EML file and storing information extracted from it.
+This section showcases the key classes employed in the library for handling an EML file and storing the information extracted from it.
 
 | **Class Name** | **Purpose in library**                                                                             |
 |----------------|----------------------------------------------------------------------------------------------------|
