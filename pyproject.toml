@@ -1,0 +1,24 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emlmailreader"
+version = "1.0.0"
+description = "Parse EML file and export informatione extracted as JSON."
+readme = "README.md"
+authors = [{ name = "Mahesh Kumaar Balaji", email = "maheshkumaar.balaji@outlook.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3"
+]
+keywords = ["email", "reader", "eml", "parser"]
+dependencies = []
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/maheshkumaarbalaji/EMLMailReader"

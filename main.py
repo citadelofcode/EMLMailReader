@@ -1,14 +1,13 @@
 if __name__ == "__main__":
-    import sys
     import os
+    import sys
 
     package_path = os.path.join(os.getcwd(), "EMLMailReader")
     if package_path not in sys.path:
         sys.path.append(package_path)
         print(f"{package_path} added to sys.path collection successfully.")
-
-    from EMLMailReader.Mail_Reader import MailReader
-    from EMLMailReader.Rx_Mail_Message import RxMailMessage
+    from EMLMailReader import MailReader
+    from EMLMailReader import RxMailMessage
 
     reader: MailReader = MailReader(os.getcwd())
     EMLFileNames = list[str]()

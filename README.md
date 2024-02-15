@@ -26,8 +26,8 @@ In this context, the term "COMPLETE_EML_FILE_PATH" indicates the complete path o
 
 ```
 {
-    "From": "Archive of Our Own <do-not-reply@archiveofourown.org>",
-    "Subject": "[AO3] DazeRaccoon posted Chapter 50 of Game of Thrones",
+    "From": "A Sample Email <sample-email-address@sample-domain.com>",
+    "Subject": "This is a test process to generate sample JSON for emlmailreader",
     "Headers-Encoding": "",
     "Body-Encoding": "",
     "Message-ID": "<65c8f7741866_1c7cdb1e649248c@ao3-app09.mail>",
@@ -66,7 +66,7 @@ Given below are the list of all the modules used in the *EMLMailReader* library.
 - **base64** - To decode base64 encoded string.
 - **json** - To convert a python object to JSON and vice versa.
 
-All modules mentioned above are present in the Standard Python library and thus, does not require explicit installation or configuration.
+All modules mentioned above are present in the Standard Python library and thus, do not require explicit installation or configuration.
 
 ## Documentation
 
