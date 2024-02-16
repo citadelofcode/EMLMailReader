@@ -1,5 +1,5 @@
-from Content_Type import ContentType
-from Content_Disposition import ContentDisposition
+from .Content_Type import ContentType
+from .Content_Disposition import ContentDisposition
 from copy import deepcopy
 
 
@@ -21,7 +21,7 @@ class MailAttachment:
 
     def parse_values(self, contents: bytes, content_type: ContentType, content_disposition: ContentDisposition, content_id: str):
         """
-            Creates a 'MailAttachment' from the given RxMailMessage object.
+            Creates a 'MailAttachment' from the given parameters.
             :param contents: Attachment file content given as 'bytes'.
             :param content_type: The Content-Type of the attachment.
             :param content_disposition: The Content-Disposition of the attachment.

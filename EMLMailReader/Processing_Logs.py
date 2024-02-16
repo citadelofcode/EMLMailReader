@@ -1,8 +1,8 @@
 import os
 import logging
 import datetime
-from Enumerations import LoggingMode, LoggingLevel
-from Custom_Exceptions import FolderNotAvailableError
+from .Enumerations import LoggingMode, LoggingLevel
+from .Custom_Exceptions import FolderNotAvailableError
 
 
 class Logger:
@@ -16,7 +16,7 @@ class Logger:
         A function to enable and setup configurations for logging.
         :param logging_mode: Denotes where the generated logs have to be stored or printed.
         :param target_folder: The target folder where the log file must be created. This parameter value must be provided only when 'logging_mode' is 'LoggingMode.FILE'.
-        :returns: the complete path for the log file generated. If the 'logging_mode' is 'LoggingMode.CONSOLE', an empty string is returned.
+        :returns: the complete path to the log file generated. If the 'logging_mode' is 'LoggingMode.CONSOLE', an empty string is returned.
         """
         complete_file_path = str()
         if logging_mode == LoggingMode.CONSOLE:

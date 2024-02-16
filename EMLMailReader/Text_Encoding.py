@@ -1,6 +1,6 @@
 from quopri import decodestring
 from base64 import b64decode
-from Custom_Exceptions import InvalidEncodingError
+from .Custom_Exceptions import InvalidEncodingError
 
 
 class TextEncoding:
@@ -10,6 +10,7 @@ class TextEncoding:
     @staticmethod
     def decode_quoted_printable_string(encoded_string: str, string_charset: str, is_header: bool) -> str:
         """
+            [FOR INTERNAL USE ONLY]
             A static function to convert Quoted-Printable encoded string to human-readable string.
             :param encoded_string: The string to be decoded.
             :param string_charset: Character set of the human-readable string.
@@ -25,6 +26,7 @@ class TextEncoding:
     @staticmethod
     def decode_base64_string(encoded_string: str, string_charset: str = "utf-8") -> str:
         """
+            [FOR INTERNAL USE ONLY]
             A static function to convert BASE64 encoded string to human-readable string.
             :param encoded_string: The string to be decoded.
             :param string_charset: Character set of the human-readable string.

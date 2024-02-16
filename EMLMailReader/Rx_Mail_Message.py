@@ -1,11 +1,11 @@
 import json
 import os
-from Mail_Address import MailAddress, MailAddressCollection
-from Mail_Attachment import MailAttachmentCollection
-from Content_Type import ContentType
-from Content_Disposition import ContentDisposition
-from Enumerations import TransferEncoding, EntityType
-from Custom_Exceptions import FolderNotAvailableError
+from .Mail_Address import MailAddress, MailAddressCollection
+from .Mail_Attachment import MailAttachmentCollection
+from .Content_Type import ContentType
+from .Content_Disposition import ContentDisposition
+from .Enumerations import TransferEncoding, EntityType
+from .Custom_Exceptions import FolderNotAvailableError
 
 
 class RxMailMessage:
@@ -16,13 +16,13 @@ class RxMailMessage:
         self.From = None
         """Email address in the 'From' header of EML file."""
         self.To = MailAddressCollection()
-        """A list of all the the emails present in the 'To' header of EML file."""
+        """A list of all the emails present in the 'To' header of EML file."""
         self.Cc = MailAddressCollection()
-        """A list of all the the emails present in the 'Cc' header of EML file."""
+        """A list of all the emails present in the 'Cc' header of EML file."""
         self.Bcc = MailAddressCollection()
-        """A list of all the the emails present in the 'Bcc' header of EML file."""
+        """A list of all the emails present in the 'Bcc' header of EML file."""
         self.ReplyTo = MailAddressCollection()
-        """A list of all the the emails present in the 'Reply-To' header of EML file."""
+        """A list of all the emails present in the 'Reply-To' header of EML file."""
         self.Subject = str()
         """Email Subject"""
         self.Body = str()
@@ -60,6 +60,7 @@ class RxMailMessage:
 
     def add_mail_address(self, PropertyName: str, MailAddressValue: str):
         """
+            [FOR INTERNAL USE ONLY]
             Adds a MailAddress() to the RxMailMessage object. This function typically parses the To, From, Cc, ReplyTo fields in the EML file.
             :param PropertyName: Name of the property in RxMailMessage object.
             :param MailAddressValue: The value to be parsed as a MailAddress.
@@ -80,6 +81,7 @@ class RxMailMessage:
 
     def set_content_type(self, ContentTypeValue: str):
         """
+            [FOR INTERNAL USE ONLY]
             Sets the Content-Type for the current MIME part.
             :param ContentTypeValue: String value to be parsed as ContentType.
             :returns: no value(s).
@@ -89,6 +91,7 @@ class RxMailMessage:
 
     def set_content_disposition(self, ContentDispositionValue: str):
         """
+            [FOR INTERNAL USE ONLY]
             Sets the Content-Disposition for the current MIME part.
             :param ContentDispositionValue: String value to be parsed as ContentDisposition.
             :returns: no value(s).
@@ -98,6 +101,7 @@ class RxMailMessage:
 
     def set_content_transfer_encoding(self, ContentTransferEncodingValue: str):
         """
+            [FOR INTERNAL USE ONLY]
             Sets the Content-Transfer-Encoding for the current MIME part.
             :param ContentTransferEncodingValue: String value to be parsed as ContentTransferEncoding.
             :returns: no value(s).
@@ -114,6 +118,7 @@ class RxMailMessage:
 
     def set_entity_type(self):
         """
+            [FOR INTERNAL USE ONLY]
             This function updates the entity type for the MIME part.
             :returns: no value(s).
         """

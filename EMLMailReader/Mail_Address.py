@@ -1,4 +1,4 @@
-from Text_Encoding import TextEncoding
+from .Text_Encoding import TextEncoding
 from copy import deepcopy
 
 

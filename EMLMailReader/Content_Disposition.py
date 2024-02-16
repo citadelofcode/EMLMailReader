@@ -1,5 +1,5 @@
 import json
-from Enumerations import DispositionType
+from .Enumerations import DispositionType
 
 
 class ContentDisposition:
@@ -12,7 +12,7 @@ class ContentDisposition:
         self.FileName = ""
         """File name of the MIME entity."""
         self.CreationDate = ""
-        """Date when the MIME entity was last created."""
+        """Date when the MIME entity was created."""
         self.ModificationDate = ""
         """Date when the MIME entity was last modified."""
         self.Size = 0

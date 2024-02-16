@@ -12,7 +12,7 @@ class InvalidEncodingError(Exception):
 
 
 class FileMissingError(Exception):
-    """A custom exception class to report errors when file is missing at the specified location."""
+    """A custom exception class to report when file is missing at the specified location."""
     def __init__(self, filePath: str):
         self.filePath = filePath
 
@@ -31,7 +31,7 @@ class IncompleteHeaderError(Exception):
 
 
 class FolderNotAvailableError(Exception):
-    """A custom exception class to report errors when folder is not available at the specified location."""
+    """A custom exception class to report when folder is not available at the specified location."""
     def __init__(self, folderPath: str):
         self.folderPath = folderPath
 

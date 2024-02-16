@@ -1,11 +1,11 @@
 import os
-from Mail_Address import MailAddress
-from Mail_Attachment import MailAttachment
-from Text_Encoding import TextEncoding
-from Enumerations import TransferEncoding, EntityType, LoggingMode, LoggingLevel
-from Custom_Exceptions import InvalidEncodingError, FileMissingError, IncompleteHeaderError
-from Processing_Logs import Logger
-from Rx_Mail_Message import RxMailMessage
+from .Mail_Address import MailAddress
+from .Mail_Attachment import MailAttachment
+from .Text_Encoding import TextEncoding
+from .Enumerations import TransferEncoding, EntityType, LoggingMode, LoggingLevel
+from .Custom_Exceptions import InvalidEncodingError, FileMissingError, IncompleteHeaderError
+from .Processing_Logs import Logger
+from .Rx_Mail_Message import RxMailMessage
 
 
 class MailReader:

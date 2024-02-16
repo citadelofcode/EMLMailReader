@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "emlmailreader"
 version = "1.0.0"
-description = "Parse EML file and export informatione extracted as JSON."
+description = "Parse EML file and export the information extracted as JSON."
 readme = "README.md"
 authors = [{ name = "Mahesh Kumaar Balaji", email = "maheshkumaar.balaji@outlook.com" }]
 license = { file = "LICENSE" }
