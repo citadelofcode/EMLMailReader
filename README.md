@@ -4,9 +4,9 @@ A Python library designed to analyze EML files and to extract details and attach
 
 ## Table of Contents
 
-- [Example Usage](https://github.com/maheshkumaarbalaji/EMLMailReader#example-usage)
-- [Modules Used](https://github.com/maheshkumaarbalaji/EMLMailReader#modules-used)
-- [Documentation](https://github.com/maheshkumaarbalaji/EMLMailReader#documentation)
+- [Example Usage](#example-usage)
+- [Modules Used](#modules-used)
+- [Documentation](#documentation)
 
 ## Example Usage
 
@@ -72,24 +72,24 @@ All modules mentioned above are present in the Standard Python library and thus,
 
 This section showcases the key classes employed in the library for handling an EML file and storing the information extracted from it.
 
-| **Class Name**                                                                               | **Purpose in library**                                                                             |
-|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| [MailReader](https://github.com/maheshkumaarbalaji/EMLMailReader#mailreader)                 | Processes an EML file, and returns the extracted information as an object of type *RxMailMessage*. |
-| [RxMailMessage](https://github.com/maheshkumaarbalaji/EMLMailReader#rxmailmessage)           | A container to store and process information parsed from the EML file.                             |
-| [TextEncoding](https://github.com/maheshkumaarbalaji/EMLMailReader#textencoding)             | Exposes methods to decode header strings and MIME part body in the EML file.                       |
-| [MailAttachment](https://github.com/maheshkumaarbalaji/EMLMailReader#mailattachment)         | Exposes properties and methods to represent a single mail attachment from the EML file.            |
-| [MailAddress](https://github.com/maheshkumaarbalaji/EMLMailReader#mailaddress)               | A class to represent an email address.                                                             |
-| [ContentType](https://github.com/maheshkumaarbalaji/EMLMailReader#contenttype)               | A class to represent the Content-Type header of a MIME entity.                                     |
-| [ContentDisposition](https://github.com/maheshkumaarbalaji/EMLMailReader#contentdisposition) | A class to represent the Content-Disposition header of a MIME entity.                              |
-| [Logger](https://github.com/maheshkumaarbalaji/EMLMailReader#logger)                         | A class to manage the configuration and generation of logs during EML file processing.             |
+| **Class Name**                            | **Purpose in library**                                                                             |
+|-------------------------------------------|----------------------------------------------------------------------------------------------------|
+| [MailReader](#mailreader)                 | Processes an EML file, and returns the extracted information as an object of type *RxMailMessage*. |
+| [RxMailMessage](#rxmailmessage)           | A container to store and process information parsed from the EML file.                             |
+| [TextEncoding](#textencoding)             | Exposes methods to decode header strings and MIME part body in the EML file.                       |
+| [MailAttachment](#mailattachment)         | Exposes properties and methods to represent a single mail attachment from the EML file.            |
+| [MailAddress](#mailaddress)               | A class to represent an email address.                                                             |
+| [ContentType](#contenttype)               | A class to represent the Content-Type header of a MIME entity.                                     |
+| [ContentDisposition](#contentdisposition) | A class to represent the Content-Disposition header of a MIME entity.                              |
+| [Logger](#logger)                         | A class to manage the configuration and generation of logs during EML file processing.             |
 
 This section also elaborates other custom entities exposed by the library.
 
-| **Name**                                                                                       | **Purpose in library**                                                   |
-|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| [Custom Enumerations](https://github.com/maheshkumaarbalaji/EMLMailReader#custom-enumerations) | Enumerations to record different options available for processing.       |
-| [Custom Exceptions](https://github.com/maheshkumaarbalaji/EMLMailReader#custom-exceptions)     | Exceptions to report error scenarios that might occur during processing. |
-| [Custom Collections](https://github.com/maheshkumaarbalaji/EMLMailReader#custom-collections)   | Collections to hold a list of items of a composite type.                 |
+| **Name**                                    | **Purpose in library**                                                   |
+|---------------------------------------------|--------------------------------------------------------------------------|
+| [Custom Enumerations](#custom-enumerations) | Enumerations to record different options available for processing.       |
+| [Custom Exceptions](#custom-exceptions)     | Exceptions to report error scenarios that might occur during processing. |
+| [Custom Collections](#custom-collections)   | Collections to hold a list of items of a composite type.                 |
 
 
 ### MailReader
