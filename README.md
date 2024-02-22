@@ -4,9 +4,18 @@ A Python library designed to analyze EML files and to extract details and attach
 
 ## Table of Contents
 
+- [Installation](#installation)
 - [Example Usage](#example-usage)
 - [Modules Used](#modules-used)
 - [Documentation](#documentation)
+
+## Installation
+
+To install the library locally, make sure you have *python* and *pip* installed in your system, and then run the below command.
+
+```
+pip install emlmailreader
+```
 
 ## Example Usage
 
