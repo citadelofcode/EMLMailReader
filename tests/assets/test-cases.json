@@ -68,5 +68,47 @@
       "Bcc": "",
       "Reply-To": "",
       "Attachment-Count": 1
+    },
+    "Test-Email-Six": {
+      "From": "Mahesh Kumaar Balaji <maheshkumaar.balaji@gmail.com>",
+      "Subject": "Test Email 6 - Sent via Gmail web",
+      "Message-ID": "<CAAafAp1JD6beKpteCDZW0Ks7oBLaxgkN+x544o76zkKoUcNHsw@mail.gmail.com>",
+      "IsMultiPart": true,
+      "Mime-Version": "1.0",
+      "Date": "Thu, 28 Mar 2024 23:36:08 -0700",
+      "Content-Type": "multipart/alternative; charset=us-ascii",
+      "To": "maheshkumaar.balaji@mkbdgs.com",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 0
+    },
+    "Test-Email-Seven": {
+      "From": "Mahesh Kumaar Balaji <maheshkumaar.balaji@mkbdgs.com>",
+      "Subject": "Re: Test Email 6 - Sent via Gmail web",
+      "Message-ID": "<DS0PR14MB675982D04613B92F1FA466CD993A2@DS0PR14MB6759.namprd14.prod.outlook.com>",
+      "IsMultiPart": true,
+      "Mime-Version": "1.0",
+      "Date": "Fri, 29 Mar 2024 06:38:08 +0000",
+      "Content-Type": "multipart/alternative; charset=us-ascii",
+      "To": "Mahesh Kumaar Balaji <maheshkumaar.balaji@gmail.com>",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 0
+    },
+    "Test-Email-Eight": {
+      "From": "Mahesh Kumaar Balaji <maheshkumaar.balaji@gmail.com>",
+      "Subject": "Test Mail 8 - Sent from Apple Mail",
+      "Message-ID": "<0EBC2220-BE31-42E1-BE56-046330F12121@gmail.com>",
+      "IsMultiPart": true,
+      "Mime-Version": "1.0",
+      "Date": "Fri, 29 Mar 2024 06:51:55 +0000",
+      "Content-Type": "multipart/related; charset=us-ascii",
+      "To": "Mahesh Kumaar Balaji <maheshkumaar.balaji@mkbdgs.com>",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 1
     }
 }
