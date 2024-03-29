@@ -1,6 +1,3 @@
-import json
-
-
 class ContentType:
     """
         A class to represent the Content-Type header of a MIME entity.
@@ -45,18 +42,16 @@ class ContentType:
                 elif key.lower().strip() == "name":
                     self.Name = value.strip()
                 else:
-                    raise Exception("Invalid parameter present in Content-Type header")
+                    continue
         else:
             self.MediaType = "text/plain"
             self.Charset = "us-ascii"
 
     def __str__(self) -> str:
-        return_data = dict()
-        return_data.update({
-            "Media-Type": self.MediaType,
-            "Character-Set": self.Charset,
-            "Name": self.Name,
-            "Boundary": self.Boundary
-        })
+        return_string = self.MediaType
+        if self.Charset != str():
+            return_string = f"{return_string}; charset={self.Charset}"
+        if self.Name != str():
+            return_string = f"{return_string}; name={self.Name}"
+        return return_string
 
-        return json.dumps(return_data)

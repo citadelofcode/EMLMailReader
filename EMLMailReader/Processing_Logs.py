@@ -20,13 +20,13 @@ class Logger:
         """
         complete_file_path = str()
         if logging_mode == LoggingMode.CONSOLE:
-            logging.basicConfig(level=logging.DEBUG, datefmt="%Y-%m-%d %H-%M-%S", format="%(asctime)s %(name)s %(levelname)s %(lineno)d %(message)s")
-        else:
+            logging.basicConfig(level=logging.DEBUG, datefmt="%Y-%m-%d %H-%M-%S", format="%(asctime)s %(levelname)s %(name)s %(message)s")
+        elif logging_mode == LoggingMode.FILE:
             if target_folder != str() and os.path.exists(target_folder):
                 _CurrentDateTime = datetime.datetime.now()
                 file_name = f"EMLMailReader_Logs_{_CurrentDateTime.year}{_CurrentDateTime.month}{_CurrentDateTime.day}_{_CurrentDateTime.hour}{_CurrentDateTime.minute}{_CurrentDateTime.second}.log"
                 complete_file_path = os.path.join(target_folder, file_name)
-                logging.basicConfig(level=logging.DEBUG, datefmt="%Y-%m-%d %H-%M-%S", format="%(asctime)s %(name)s %(levelname)s %(message)s", encoding="utf-8", filename=complete_file_path)
+                logging.basicConfig(level=logging.DEBUG, datefmt="%Y-%m-%d %H-%M-%S", format="%(asctime)s %(levelname)s %(name)s %(message)s", encoding="utf-8", filename=complete_file_path)
             else:
                 raise FolderNotAvailableError(target_folder)
         return complete_file_path

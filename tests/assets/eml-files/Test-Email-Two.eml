@@ -1,0 +1,112 @@
+X-GM-THRID: 7025609532766158848
+X-Received: by 2002:a05:6808:5c5:: with SMTP id d5mr20082754oij.173.1635777190947;       
+ Mon, 01 Nov 2021 07:33:10 -0700 (PDT)
+X-Received: by 2002:a05:6808:1408:: with SMTP id w8mr3371109oiv.128.1635777190609;       
+ Mon, 01 Nov 2021 07:33:10 -0700 (PDT)
+X-Received: by 2002:a05:620a:1a93:: with SMTP id bl19mr4932949qkb.488.1635777190020;     
+   Mon, 01 Nov 2021 07:33:10 -0700 (PDT)
+X-BeenThere: the-bungalow@googlegroups.com
+Received: by 2002:aca:5989:: with SMTP id n131ls3934509oib.3.gmail; Mon, 01 Nov 2021
+ 07:33:10 -0700 (PDT)
+Received: from mail-qk1-x730.google.com (mail-qk1-x730.google.com.
+ [2607:f8b0:4864:20::730])        by gmr-mx.google.com with ESMTPS id
+ v18si837278oie.5.2021.11.01.07.33.10        for
+ <the-bungalow@googlegroups.com>        (version=TLS1_3
+ cipher=TLS_AES_128_GCM_SHA256 bits=128/128);        Mon, 01 Nov 2021
+ 07:33:10 -0700 (PDT)
+Received: by mail-qk1-x730.google.com with SMTP id bk22so9934836qkb.6        for
+ <the-bungalow@googlegroups.com>; Mon, 01 Nov 2021 07:33:10 -0700 (PDT)
+Received: from smtpclient.apple (36.sub-97-47-66.myvzw.com. [97.47.66.36])        by
+ smtp.gmail.com with ESMTPSA id c24sm10872797qkp.43.2021.11.01.07.33.07      
+  for <the-bungalow@googlegroups.com>        (version=TLS1_3
+ cipher=TLS_AES_128_GCM_SHA256 bits=128/128);        Mon, 01 Nov 2021
+ 07:33:09 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzmfIr8SI5h6fW9ZRUxnHHA7gv8kaH2RfCdprT7zJi0r/+3I/oSgMnLMcgf0+yQO+P4svJz
+ARC-Seal: i=1; a=rsa-sha256; t=1635777190; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=xRp4jl9Z6AbSq0pLCwj33ylpAYzz5d+l+53U8yXFx4A6riU8ngzqOsh6/B3NPHgTB+        
+ PS/l7kMQyQCAAA2diB4dGG3mX9Llbc1/AbcyH0K2A3ILA6J2HyWlzlpNgaeN6ZhKN78R        
+ Dx283O+YC5lO5h7HldoaCyt3/r6NutVMvZC1wa17vJALzaYIv2BYW4OnDxnQHRNJNC62        
+ SbG8VlHds9JxqwRLkuR4NbUjag0pENX+BldAij+jTTpJbjaN6Lzow2IDjPMSZx43IKEi        
+ iV1mHKCGdscElAZPmG2dvDShhcgvASSjJbEe81QQ/jU4KHzYrCjVPpuqE1BponpidILz        
+ E++Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;       
+ h=to:message-id:subject:date:mime-version:content-transfer-encoding        
+ :from:dkim-signature;       
+ bh=NfAle+fS2ZM+0C2QIl/z9rxwvlI7dsCcmtP7Po5mLMk=;       
+ b=voxTsuKPz+N2UJfAWFafaoV8/4h9Yje1pSqCKEWwXslvZmmcMAHkMNXcZ7pRn5hSHz        
+ 86+fhdAPfZp1S5c6xwUnPofuZCso40mLXzEtKvSH6FkEHlnb3AIO8GOxkyvT7DV/62rY        
+ NmqiGrs4qcITYKRjMm/HXEE0ZvUD1cKF0AXzJH1ntM6RNx8bXozlF5bzDuSltAsl3HuA        
+ G4gE+K0cxR1EnGj+MRW1rV84XAryYI/dV2FKpsG+8LtHGnAKRtTt4H4Km/58QmLPfWXp        
+ ZKL0EQHYhON1PIuuhtpzNe0W5L397/1JaOYmI2UNaIH7aRLHBp5vb9jSmxc+IkOBw62W        
+ Y4Zw==
+ARC-Authentication-Results: i=1; gmr-mx.google.com;       dkim=pass header.i=@gmail.com header.s=20210112
+ header.b=g0TLD88s;       spf=pass (google.com: domain of
+ ted.chadwick@gmail.com designates 2607:f8b0:4864:20::730 as permitted
+ sender) smtp.mailfrom=ted.chadwick@gmail.com;       dmarc=pass (p=NONE
+ sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ted.chadwick@gmail.com>
+Return-Path: <ted.chadwick@gmail.com>
+Received-SPF: pass (google.com: domain of ted.chadwick@gmail.com designates
+ 2607:f8b0:4864:20::730 as permitted sender) client-ip=2607:f8b0:4864:20::730;
+Authentication-Results: gmr-mx.google.com;       dkim=pass header.i=@gmail.com header.s=20210112
+ header.b=g0TLD88s;       spf=pass (google.com: domain of
+ ted.chadwick@gmail.com designates 2607:f8b0:4864:20::730 as permitted
+ sender) smtp.mailfrom=ted.chadwick@gmail.com;       dmarc=pass (p=NONE
+ sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20210112;       
+ h=from:content-transfer-encoding:mime-version:date:subject:message-id       
+  :to;        bh=NfAle+fS2ZM+0C2QIl/z9rxwvlI7dsCcmtP7Po5mLMk=;       
+ b=g0TLD88sOjmG+QGi/7962891CDsSTn3YF7tRBARe3BQ+hoT8dN4ZjzxF1IH8Tv/mWk        
+ va7x+pIEZpwzDMwLrkdJV3Uc7908KUAMjO+2zL2WWPpAlPproH7ukH5m1vcZdSz0FIQI        
+ hcEbRpD6U7jO7cUO0vRER7nHWof7+sM+ur4cef+aiPy8Urb/wVI1PWxJ75sBHNqySY5Z        
+ uerm2K3qQrEURm5XNRXNcT3Sy05IPZ+CTtQwq9Vv6kXLcWjpPbOfliaMBfZapfDRcypV        
+ KoZEaHWKw1wGT/yWL6hq9l2oEWExQEzCBgf3Ug1bzfjX1KXn+nBGHVuArVHKEyUIdanw        
+ SFow==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20210112;       
+ h=x-gm-message-state:from:content-transfer-encoding:mime-version:date       
+  :subject:message-id:to;       
+ bh=NfAle+fS2ZM+0C2QIl/z9rxwvlI7dsCcmtP7Po5mLMk=;       
+ b=bj+TKQFS6JjPjOrm1nQ3AhjH++g+RFN741fbhK4KXWtbv7qTO0G7Hzf1XP6Slx8DmF        
+ Pq53hjuHc9pgKdDfYW8nNfgC95T8n5vtONjU0QVzSqBLmDgxISljt4Ox4zVyB7ChLwMB        
+ Pho2YWnDVk7TAx4mHUHK0sk7bvqbSz4dEDfyB+w4+hdQ5mJnAx4HKFJeg1JaVM3svsG4        
+ dKmzUvsH+G/4ioA0hyWOpor8YprO3OSAXx5r6MbjTeqWCZkl2jivHH2YQq42mZl7LvZB        
+ najdyJ65RAYSWB6MRgSPI/KjgSXtW4QoeOpf7pStnRbfApApxdCXn+/f3iilZ2iTQvjo        
+ X0VQ==
+X-Gm-Message-State: AOAM5334oMRScGoSj+5hlMcWrRquJ/cE5INtxXR1QTRzxSyEx5xgTCML	90chOy9YXo2Lm7M50MN+PaStVdp9QMQ=
+From: "Ted Chadwick" <ted.chadwick@gmail.com>
+X-Google-Original-From: Ted Chadwick <Ted.Chadwick@gmail.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0
+Date: Mon, 1 Nov 2021 10:18:31 -0400
+Subject: Fracassa call 11/1
+Message-Id: <53EFDC03-4FAC-4065-B00F-114186791D54@gmail.com>
+To: "The Bungalow" <the-bungalow@googlegroups.com>
+X-Mailer: iPhone Mail (18H17)
+
+Hi everyone,=20
+=0AI had a productive call with Kelly Fracassa this morning:=20
+=0AItem #1 the notice in the Jamestown Press=2E=20
+=0AKelly recommends that he file an =E2=80=9Camended complaint=E2=80=9D whi=
+ch would establish Chris, Eric, George and me as heirs of JB Lippincott=E2=
+=80=99s 1900 shares of Conanicut Reserve stock=2E That would serve as our o=
+fficial written response to the notice, and neutralize any Biddle who might=
+ come forward with a similar claim=2E I provided Kelly with the chain of de=
+scent to verify the generational fractions=2E=20
+=0AI need everyone=E2=80=99s OK to authorize Kelly to proceed with the lega=
+l work=2E=0A=0AItem #2 the construction=0ABecause we are heirs to CR stock,=
+ and because we my be declared co-owners of the roadway at some future date=
+, any construction within the CR roadway is a potential violation of our pr=
+operty rights, and we could ask for an injunction to halt any construction =
+until the case is resolved=2E=20
+=0AThere are pros and cons to this=E2=80=A6 we should not hesitate to enfor=
+ce our rights, and Cannon is throwing this in our face=2E=20
+On the other side, we have not been materially harmed=E2=80=A6 our access r=
+ights have not been hampered=E2=80=A6 and Canon will freak out and sue us, =
+which will add to our costs=2E=20
+=0AKelly is open to a conference call after he starts work on #1 to walk us=
+ all through the pros and cons of #2=0ASince the construction is ongoing, w=
+e should not delay too long on this=2E=20
+=0AWhat dates and times this week are you all=0AAvailable?=20
+=0ATed=0ASent from my iPhone

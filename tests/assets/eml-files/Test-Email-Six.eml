@@ -1,0 +1,197 @@
+Received: from DS0PR14MB6951.namprd14.prod.outlook.com (2603:10b6:8:fc::11) by
+ DS0PR14MB6759.namprd14.prod.outlook.com with HTTPS; Fri, 29 Mar 2024 06:36:23
+ +0000
+Received: from CH2PR08CA0018.namprd08.prod.outlook.com (2603:10b6:610:5a::28)
+ by DS0PR14MB6951.namprd14.prod.outlook.com (2603:10b6:8:fc::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.40; Fri, 29 Mar
+ 2024 06:36:21 +0000
+Received: from CH2PEPF00000145.namprd02.prod.outlook.com
+ (2603:10b6:610:5a:cafe::2c) by CH2PR08CA0018.outlook.office365.com
+ (2603:10b6:610:5a::28) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.13 via Frontend
+ Transport; Fri, 29 Mar 2024 06:36:20 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.160.179)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.160.179 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.160.179; helo=mail-qt1-f179.google.com; pr=C
+Received: from mail-qt1-f179.google.com (209.85.160.179) by
+ CH2PEPF00000145.mail.protection.outlook.com (10.167.244.102) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7409.10 via Frontend Transport; Fri, 29 Mar 2024 06:36:20 +0000
+Received: by mail-qt1-f179.google.com with SMTP id d75a77b69052e-432bb011203so5422631cf.2
+        for <maheshkumaar.balaji@mkbdgs.com>; Thu, 28 Mar 2024 23:36:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1711694179; x=1712298979; darn=mkbdgs.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=nH6XGPOJ92R/PeXZX62y3Sp0YzKt0nJbDVZAnPKeJjQ=;
+        b=e57kbEmXcKfZfNr+LU97SY+bBlfTn7LmRNfJ8Jw8T+9fMZWonAZn5IsXnaXu7tAAD2
+         dheX13by2lxgN9+/UdOCX7AB4XtMjlY/uzQV6MCITPn0a8FdNJIzzX1fzZAnwyb/RR4o
+         65monhCU6vZycZBTvesG0QSaTVMVoAxqWoaZRfUZjWjsdu8Pkz8d2ohMz+CL6V9EGZ4t
+         UjN/XfZc6VHyKHPvMhtYzcn09tC0POLW88c2n6VoaB7OENP7jAbZj7bhTwPFiiJa7yBa
+         mxh1V1dTyscA9tnwQYDhsydbs3kqEJOv5txYDOmh02VGb21syt5YeMcf22jAzwWDF9Fe
+         hxUA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1711694179; x=1712298979;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=nH6XGPOJ92R/PeXZX62y3Sp0YzKt0nJbDVZAnPKeJjQ=;
+        b=pz+Gydkq/N37TM24xhy8qAUoWkGPbGXyLQP0xofbgdHhaezZsP13kiPWMDyd9kRrwG
+         1KnLwxITrghDXumhPV14qNqFk1aO7WO771UxUpTp0M2oxMTbV8Qn4MowFd5IPs1JI0wt
+         RF21qSkB6calJhEvic0rrlu8TLThLrPicSKg1/ca66cBVzNC/ds01wgHFQWcViObls2R
+         ShU9MxtHA11Xa/nSQMJqIMxP46kx/n4AM/e1Ksj6FrtatpPYkFS8ryMOfEULHn6JRMiX
+         BHB6onKUBW/z+HLDleqU5CNI0Hz9XRnZfRFU+c/Tw2I6GyQs9vAjPFOtvjeiSuz/whLK
+         NKCg==
+X-Gm-Message-State: AOJu0Yyf7IN/vIGQihvkJjic/tRCWtMjYPi9CrrhdvXt1ri46/tsmaZQ
+	9DjhSWv4boGGUAwNfJLgq3tsXb/LAnp7OHz1pxxnu4BcFupWoW8q1Z/AU7MRs5sXCykiFfUrk7H
+	E3q7D2vaa/c+HFNI7aEjyQ2zBMu7nQwdgnVk=
+X-Google-Smtp-Source: AGHT+IE30lTwwpv+EoI+H3FxdOw8fqKA31MMDPTy7uwluBzC7GL+9nb7Woykv+OSaHmKd7jM0xUn7Hsp60IWPWf2Huo=
+X-Received: by 2002:ac8:7d82:0:b0:431:8290:716 with SMTP id
+ c2-20020ac87d82000000b0043182900716mr1954576qtd.5.1711694179371; Thu, 28 Mar
+ 2024 23:36:19 -0700 (PDT)
+From: Mahesh Kumaar Balaji <maheshkumaar.balaji@gmail.com>
+Date: Thu, 28 Mar 2024 23:36:08 -0700
+Message-ID: <CAAafAp1JD6beKpteCDZW0Ks7oBLaxgkN+x544o76zkKoUcNHsw@mail.gmail.com>
+Subject: Test Email 6 - Sent via Gmail web
+To: maheshkumaar.balaji@mkbdgs.com
+Content-Type: multipart/alternative; boundary="0000000000008691850614c6db7d"
+Return-Path: maheshkumaar.balaji@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Mar 2024 06:36:20.6643
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1a086314-a8a6-4f09-2b11-08dc4fba8bbc
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: c09486f1-4e60-48d9-a3ca-1af438ae8849:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ CH2PEPF00000145:EE_|DS0PR14MB6951:EE_|DS0PR14MB6759:EE_
+X-MS-Exchange-Organization-AuthSource:
+ CH2PEPF00000145.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 1a086314-a8a6-4f09-2b11-08dc4fba8bbc
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:209.85.160.179;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-qt1-f179.google.com;PTR:mail-qt1-f179.google.com;CAT:NONE;SFS:(13230031);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Mar 2024 06:36:20.1643
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1a086314-a8a6-4f09-2b11-08dc4fba8bbc
+X-MS-Exchange-CrossTenant-Id: c09486f1-4e60-48d9-a3ca-1af438ae8849
+X-MS-Exchange-CrossTenant-AuthSource:
+ CH2PEPF00000145.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DS0PR14MB6951
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.5834948
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7409.037
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?NjZhSVl0Y3k4NnAraGpFMnFKYW4yZU5HT0xQNit2WDFrVm9hWDFQcG4zMEsy?=
+ =?utf-8?B?cFBBTEF4V0lQR3dYQXB4M3k5RG9uL2JvZFFidWRKQ2JZMUZJUG91NHZ1Skth?=
+ =?utf-8?B?cGZaSmZkNXhDQ0Y2NGNSRlBrc200WU1lTDVDV3hrWmJTV3NUM2Y0eWJocEtP?=
+ =?utf-8?B?WVdSbjVNNXV3TWZtVm9hMHFIK0pyOXU4Q0xtMTVPakZSNUJCeGlPUHB2QmVD?=
+ =?utf-8?B?TFJhVisyZDA5TnZYUGZwTU03Q3IxcjV3NHJwUnhsZDRyRjdNUGhtVzE5RzZJ?=
+ =?utf-8?B?NXZYdlFrZjNycStwS01FMlpNVXMrUU0zU0cxNml6dUJBVGdHWHVuOGxzZ1NW?=
+ =?utf-8?B?eTJFUjhKTmo0WWpEWFZMTkFlanM0K3JPQnpROFpxUmlLb0NodFlLazd2ZTRx?=
+ =?utf-8?B?VTgvNDZtNEN2MENTY21JL2djTEZDSDZnbzUzSUxWNld1MWQ5TmFFTU9YT2Fk?=
+ =?utf-8?B?ZWZwVDBscEJRdndSMXV3UUJYQTVnZmcwK0hvRE9PVGNIZGRVelE3dkNVRThv?=
+ =?utf-8?B?dUlRSzR1TlJMdHBwWE4wNEQwQ2pZNnBjWTdNYURrYTZQZUNjZmVBM3p5VXpw?=
+ =?utf-8?B?bjcxY2RMd1Z6SlFpdkJGcEtyVG03MGRvcUhoQ1NLZ0ZwakM3VWJLbkFPeG1r?=
+ =?utf-8?B?MkNPSlFzcUpQSXJ1b1BGUFEwRTVmb3RrRHAyNERPcG5nbkpjV3hEVWJVRVFv?=
+ =?utf-8?B?ai9jWW1iUjFxUFc1MVJOZit6NzI1cDBJb0hyanlTWU1VL21RVldXNzdVbFpH?=
+ =?utf-8?B?VWhmN2ZVZDZGekFvZnJOdG1MZ3d1aE5XZlo0NFhNM3BwSk9lSEdkbm56TjIx?=
+ =?utf-8?B?emtrZmo1Q0o0clV4aWdFMXhmMUcvWkJ5N013QlhadW5nTXdJRmZ2MVczdWtw?=
+ =?utf-8?B?MWczNW8rcXBwWm85bTlNYStTSFhJakxJMTRGZzkyVlU2ZU9sZTJTZFEwRTQr?=
+ =?utf-8?B?bjhsRWk5YWdBT3dlaUJRUVlveTI5MG52SUkwNzR2UmhqUnB6TnhKbFN4Sncy?=
+ =?utf-8?B?WWhtNjh4VDhORy9IRS9ZUitKNGcvLzZnS3dSTGJ5anFNT0JCTDlkK2dCL1J0?=
+ =?utf-8?B?NXptanNJZ1hOTENkM3VieElvaVM2STI0Q1Q2VldXcTJjcFRncWVIbWdaLzZz?=
+ =?utf-8?B?UXFtVEdlenRBeUJvMGloaFk1SzZNNDNMdUFtWGNhWVBnNDZiN0EreGVsazZW?=
+ =?utf-8?B?dGJoazk1cmNhK3NOUWk3Szh3bG14ZWQ4QVd0VEpJNjhwMUtxYlhwQnRYSlc4?=
+ =?utf-8?B?MVV5WlN5dlVNMloxSDhOaE5BSFFsWkw1K3F4L2hjakpMSzJuNFZrWFdCdXBM?=
+ =?utf-8?B?RXl5dGNsSDNrVEFxZW54bGJqdUt4YjZxWllSWjZjVjQ5a1FwV3NqQUVpSmUr?=
+ =?utf-8?B?MUs5dkVCRlJaRW1oZUkxTlU2aEhuazR4cDVPOW5rM0RQdzhpZ055cHhSRldw?=
+ =?utf-8?B?b1p5TXRBeldXNEpIMTVhNFJocWpzTTFqTU5WSEREQWhvTTRHaWhxdnJHQXBC?=
+ =?utf-8?B?MU5mTU1Fc21nVmZQSlhjTEhpSnFSdysrSHFZa2l6VmwrMmZrK2QveDR2STBz?=
+ =?utf-8?B?d1QvWHJnNzFwQW96NERWQWlVU2tad3BQQW5tVFBkWUdHR2tySkM3dVlnOGti?=
+ =?utf-8?B?OE9FU2tieUhHOHVHcDk0YURxcDBWbzhYYjlUNStrV0Iwb1pFQmJoRHVRNGtF?=
+ =?utf-8?B?dlFJVEpnVUJnSHhNSC9LL1BVVStrZ1REOS95WlI0Y3lUMWs0TFpJMTFyR3Nu?=
+ =?utf-8?B?TTdSb1cyM3NJM1l1OU9xRmZBVTd5NnBSVDJkOEErWkpMR2w1aTk0RHA0Q2Fo?=
+ =?utf-8?B?dkxaSU01c2krcHplcUs1dEo2UnZJejdreGhOTGRvc2NIdjNxa0l4OG80dklZ?=
+ =?utf-8?B?OTRPUThTTmxGT1h2Qlh5NGxHYXp4WkNpb2hIOCs0dTNyOXpVbDZMb2pTWjl4?=
+ =?utf-8?B?cXFDbzNwR3RlT1lCYVZLZVFzcHpqNDUwVTZpNWsvK0lKMElQQmJKL2Rxc2l0?=
+ =?utf-8?B?RWtYZzU3TUVCdWFPSXFZbHozYnU3VVlWUEpmZWVvaEcxUEFhTFFFcW1VemVp?=
+ =?utf-8?B?RWRkaXVIOGZwV1puNmRxYXorZFpCQVZleC9pU3lEVU9WazdWditZbko0V0I2?=
+ =?utf-8?B?dkhFemlsdEN5bHltZnIydjJ2d1l2N3FVSHBVSXE0czE1RGoyUlpEcDlyMWFG?=
+ =?utf-8?B?NUpnWXErcHVhWjdjMkFpTlNzSU0wMFFjUHZpRTBUSmdsblFoditaN0FvbDRZ?=
+ =?utf-8?B?T2oyYncrekpnbmFaVCtiQXFyRzdmT2lhSmozRmFDWVIzT1gxUGVjWjJGcFZv?=
+ =?utf-8?B?Sm5NVzAwM2ZLaXA3YWNiNlJ3NE5jeC9jaEtaMytOL0pteXpXVlBHTC9IREdL?=
+ =?utf-8?B?ekdZUFl4WEZHSUsvc0t5dlR1Rk9BZTE4QjJpSkZLa1k0YXRCelVqZmdlMzlH?=
+ =?utf-8?B?VGhDOGNHRkxmUXlFM2E0RnNVZ2FGaDFNOU5kcWh0R2FUUDAxcHF6MDVMaWk2?=
+ =?utf-8?B?YmY3Snk0Ym9NQjNkUlNoQ0FPa2FyUzVCYmhCaEUxY0RiUWZ1OUk3NkNPc1g2?=
+ =?utf-8?B?MDJRWWNTSEZUMitnZ1Rsa0N6VmlnZllrMDYwc3cwdzYrTWpQWnNGVGg3VG9U?=
+ =?utf-8?B?ajJEWEhBZz09?=
+MIME-Version: 1.0
+
+--0000000000008691850614c6db7d
+Content-Type: text/plain; charset="UTF-8"
+
+Email sent via gmail web.
+
+-- 
+
+Thanks and Regards,
+
+*Mahesh Kumaar Balaji *(He/Him)
+
+Chennai, Tamil Nadu, India.
+
+*m*: +91 - 9962320841
+*e*: maheshkumaar.balaji@gmail.com
+
+--0000000000008691850614c6db7d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"ltr">Email sent via gmail web.<br clear=3D"all"><div><br></div><s=
+pan class=3D"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><p=
+ class=3D"MsoNormal"><span lang=3D"EN-IN" style=3D"font-size:12pt;font-fami=
+ly:&quot;Calibri Light&quot;,sans-serif">Thanks and Regards,</span></p><tab=
+le border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"450" style=3D"=
+width:337.5pt;background-image:initial;background-position:initial;backgrou=
+nd-repeat:initial;border-collapse:collapse"><tbody><tr><td colspan=3D"2" va=
+lign=3D"top" style=3D"border-top:none;border-right:none;border-left:none;bo=
+rder-bottom:1pt solid green;padding:0cm 0cm 7.5pt"><p class=3D"MsoNormal"><=
+b><span style=3D"font-size:14pt;font-family:Verdana,sans-serif;color:green"=
+>Mahesh Kumaar&nbsp;Balaji&nbsp;</span></b><span style=3D"font-size:9pt;fon=
+t-family:Verdana,sans-serif;color:green">(He/Him)</span><b><span style=3D"f=
+ont-size:14pt;font-family:Verdana,sans-serif;color:green">&nbsp;</span></b>=
+</p><p class=3D"MsoNormal"><span style=3D"font-size:12pt;font-family:&quot;=
+Calibri Light&quot;,sans-serif;color:rgb(59,73,8)">Chennai, Tamil Nadu, Ind=
+ia.&nbsp;</span></p></td></tr><tr><td width=3D"60%" valign=3D"top" style=3D=
+"width:270px;padding:7.5pt 0cm 0cm"><p class=3D"MsoNormal" style=3D"line-he=
+ight:13.5pt"><b><span style=3D"font-size:12pt;font-family:&quot;Calibri Lig=
+ht&quot;,sans-serif;color:rgb(68,68,68)">m</span></b><span style=3D"font-si=
+ze:12pt;font-family:&quot;Calibri Light&quot;,sans-serif;color:rgb(68,68,68=
+)">: +91 - 9962320841</span><span style=3D"font-size:10pt;font-family:Verda=
+na,sans-serif;color:rgb(68,68,68)"><br></span><b><span style=3D"font-size:1=
+2pt;font-family:&quot;Calibri Light&quot;,sans-serif;color:rgb(68,68,68)">e=
+</span></b><span style=3D"font-size:12pt;font-family:&quot;Calibri Light&qu=
+ot;,sans-serif;color:rgb(68,68,68)">:&nbsp;<a href=3D"mailto:maheshkumaar.b=
+alaji@gmail.com" target=3D"_blank">maheshkumaar.balaji@gmail.com</a>&nbsp;<=
+/span><span style=3D"font-size:10pt;font-family:Verdana,sans-serif;color:rg=
+b(68,68,68)">&nbsp;</span></p></td><td width=3D"40%" valign=3D"top" style=
+=3D"width:180px;padding:7.5pt 0cm 0cm"></td></tr></tbody></table></div></di=
+v></div>
+
+--0000000000008691850614c6db7d--

@@ -1,0 +1,123 @@
+X-GM-THRID: 6467963821060259840
+X-Received: by 10.98.90.4 with SMTP id o4mr1791365pfb.51.1505940179927;        Wed, 20
+ Sep 2017 13:42:59 -0700 (PDT)
+X-Received: by 10.36.111.139 with SMTP id x133mr1901122itb.11.1505940179657;        Wed,
+ 20 Sep 2017 13:42:59 -0700 (PDT)
+X-Received: by 10.98.20.78 with SMTP id 75mr3318112pfu.239.1505940179456;        Wed, 20
+ Sep 2017 13:42:59 -0700 (PDT)
+X-BeenThere: the-bungalow@googlegroups.com
+Received: by 10.36.41.196 with SMTP id p187ls481206itp.9.gmail; Wed, 20 Sep 2017
+ 13:42:59 -0700 (PDT)
+Received: from mail-pf0-x233.google.com (mail-pf0-x233.google.com.
+ [2607:f8b0:400e:c00::233])        by gmr-mx.google.com with ESMTPS id
+ e2si48064pfm.12.2017.09.20.13.42.59        for
+ <the-bungalow@googlegroups.com>        (version=TLS1_2
+ cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);        Wed, 20 Sep 2017
+ 13:42:59 -0700 (PDT)
+Received: by mail-pf0-x233.google.com with SMTP id y29so2114508pff.0        for
+ <the-bungalow@googlegroups.com>; Wed, 20 Sep 2017 13:42:59 -0700 (PDT)
+Received: from ?IPv6:2600:8805:bd82:0:c0be:c060:ff6e:546c?
+ ([2600:8805:bd82:0:c0be:c060:ff6e:546c])        by smtp.googlemail.com with
+ ESMTPSA id z187sm10877124pfb.60.2017.09.20.13.42.57        (version=TLS1_2
+ cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);        Wed, 20 Sep 2017
+ 13:42:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1505940179; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=nPjNRplB7afQSfc30GEWSRlnzI85ajQnWjsIlYpNiU7sT3EzV+CHX7ZPmeC4rgxBVu        
+ XLEvexIiPJtCoBaqIAoqHseeiNc+Lm2kUvJbWRn4vfGCuTX3R9W1sFTb+acxE7G1hNMy        
+ uXu4+ze1mgElYLD5iIkiOidN/Uu0QcwDoT8XcTh7wdWj8pQvozZoShs0P3iHhO/nfEmZ        
+ sDp4r3s5AOZJjITtU/3oqE1fB2Uu4fmmYx7y9LUTvu7eoK05W816iT0XkGSZnat6EvN8        
+ QTfbxFYThFGH7LWfCO6u/hvJ/vESrOWExjTvyr5qQVoS1K5k5w5WtMY6tL9/s9a1JIQG        
+ DNBg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;       
+ h=content-language:content-transfer-encoding:mime-version:user-agent        
+ :date:message-id:subject:from:to:dkim-signature        
+ :arc-authentication-results;       
+ bh=wqMWoZTI8Q1xMmh5mi/rnK7ycAoHE7xs4vzo892Va4A=;       
+ b=cYdZ/8D7FuqdwUqTv2JFlbC4ZJdj2tRei61vgVSixV4KltB+L/S08DrSk7LoYyRqc5        
+ 03fKKxh+LNG++6EMYUlPdpkWwAiGIMxNNf5+5XG6Dk8c+Kubyq/bVEdL47UMc2ab5I+f        
+ gv6uwa87f4v/AIN0zAPCgTeKsDAkUQ+tozLcibvxv82WlL/UZbJK5O/GHwqbAbHCRTD9        
+ UX9v41F9kXDYwMRXA5m4/Lc8g2RDeeNVUrqxz2RKz9g27sUBVA5i/wLlcj3NPWm5VbQD        
+ c5KInQzZ0gpOWvHXrzwUEmS9qaXH7uIuykpMAEgLNwvAFHXTTp49seJAxB6H0xSbObFc        
+ mX2w==
+ARC-Authentication-Results: i=1; gmr-mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025
+ header.b=qhQBPE9p;       spf=pass (google.com: domain of
+ mk.balaji@gmail.com designates 2607:f8b0:400e:c00::233 as permitted
+ sender) smtp.mailfrom=mk.balaji@gmail.com;       dmarc=pass (p=NONE
+ sp=NONE dis=NONE) header.from=gmail.com
+Return-Path: <mk.balaji@gmail.com>
+Return-Path: <mk.balaji@gmail.com>
+Received-SPF: pass (google.com: domain of mk.balaji@gmail.com designates
+ 2607:f8b0:400e:c00::233 as permitted sender)
+ client-ip=2607:f8b0:400e:c00::233;
+Authentication-Results: gmr-mx.google.com;       dkim=pass header.i=@gmail.com header.s=20161025
+ header.b=qhQBPE9p;       spf=pass (google.com: domain of
+ mk.balaji@gmail.com designates 2607:f8b0:400e:c00::233 as permitted
+ sender) smtp.mailfrom=mk.balaji@gmail.com;       dmarc=pass (p=NONE
+ sp=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com; s=20161025;       
+ h=to:from:subject:message-id:date:user-agent:mime-version        
+ :content-transfer-encoding:content-language;       
+ bh=wqMWoZTI8Q1xMmh5mi/rnK7ycAoHE7xs4vzo892Va4A=;       
+ b=qhQBPE9pHt1grAAYImet1UV8my8kLtyPBue0MAWnEEqNZ1/oyZ/1A19GyDku25K352        
+ faU2D0bbIeRswJBRpNlPocutl4HjqfHtEc+SqHldlNEIhGs/yO1I/dQFp+yYD2QfUKA+        
+ KPrvY3lMQfWyvl4F2hRpgTJF08LzTWN24at7ABn8kCWKZKAQxr2y10W5mT+77hDIZFNA        
+ zR7fw4rP495vFpTh9Pzy+7qDEv7b+2dee00t5W/QOsT5TbvGXJ9eGZuNn8LjYOtHiMoR        
+ kTQYG1+PfbUb/JyDSTl4WYNFxgtbxRhoB20g1Z4ugJFZSrUPFoA0FtmVDduQXpM7U3bQ        
+ R51Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;       
+ h=x-gm-message-state:to:from:subject:message-id:date:user-agent        
+ :mime-version:content-transfer-encoding:content-language;       
+ bh=wqMWoZTI8Q1xMmh5mi/rnK7ycAoHE7xs4vzo892Va4A=;       
+ b=m/DSWhbPiJYHWJPopsaePZ8eaLO5KhSh2159I9W6mB1QIEtode7hwD06NebNnXxNME        
+ tpcSYdSoyGHtkc+25k3hnwRiWcLtwcOB08n3YJK3b25G1dl5+xlqg0OmRjL6r1ecdeAC        
+ zuYSjosj7xdyilAW3RCSIedicVteN6llDoJy10JOSiHYEfssX6sh3cW0pv+Zc0i2Ouwf        
+ gT8qLCEYpvmQzfmfP/qS221JuiMxs0V8klXyEWvQ1S3EYAqGscbEg4GKi8Ltznz7x2Ky        
+ 2Z2siMSZ2rkxsAGnDeskitU7hXdw5fi5g+RAdhFmK39H7HDAIsusrwJLNMHvmHAKNCEe        
+ AOKA==
+X-Gm-Message-State: AHPjjUjSP9Bd9CARLIfmgIQ5iKbzG49S9alI+eiP6ltqtOrCTGU7NZrz	evxfIQfr4Ejqox9zF3AMQfM=
+X-Google-Smtp-Source: AOwi7QAvptjeWfEOxKezZwHgtOrJml8svT80mr45L+l4uxs5WvbHDqknrV/sv4pr6CgywAY9Vh+wqA==
+To: "the-bungalow@googlegroups.com" <the-bungalow@googlegroups.com>, "Mahesh Kumaar Balaji" <mk.balaji@gmail.com>
+From: "Mahesh Kumaar Balaji" <mk.balaji@gmail.com>
+Subject: Chris made appointment with Kenyon to prepare for deposition
+Message-ID: <f344d1b5-26f6-bc3f-23bc-787257a1a440@gmail.com>
+Date: Wed, 20 Sep 2017 16:43:13 -0400
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.3.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+
+Dear all,
+
+cc Moi
+
+Even though George prepared me for the deposition on a phone call 
+yesterday (where is I was sitting on the Bungalow porch after moving 
+some furniture inside watching the big waves), I called Kenyon and he 
+wants to meet me before my deposition, so I made an appointment for next 
+Monday, since I need to be in Wakefield for a appointment after.
+
+John K. is assuming we will all be deposed but does not know this. I'm 
+not so sure. I think if I bring my banjo to the deposition and don't 
+wear pants, they may not depose any of the rest of us.
+
+The partial hospitalization program at Newport hospital is going well. 
+Today was day 8 for me. I've become a Trump supporter and renounced 
+science and the environment. Fake News!
+
+These new anxiety drugs are interesting.
+
+Chris
+
+P.S.: Maybe I should actually bring my Banjo Monday when I meet with 
+Kenyon.
+
+-- 
+Mahesh Kumaar Balaji
+mk.balaji@gmail.com
+home landline: 401-560-0368
+123 Howland Avenue
+Jamestown, R. I. 02835
+
+
