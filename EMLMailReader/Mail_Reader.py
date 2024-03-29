@@ -12,16 +12,18 @@ class MailReader:
     """
         MailReader class reads the contents of an EML file, extracts all the information present in the file and stores them as a Python class object.
     """
-    def __init__(self, TargetLoggingFolder: str = str()):
+    def __init__(self, logging_mode: LoggingMode = LoggingMode.NONE, TargetLoggingFolder: str = str()):
         self.__Lines = list()
         """List of all lines read from the EML file."""
         self.__NextLineIndex = 0
         """Index of the next line to be processed in the EML file."""
         self.__NewLineCharacter = str()
         """Newline character used in the EML file to distinguish one line from another."""
-        if TargetLoggingFolder == str():
+        self.__EndOfFile = "EOF"
+        """Value returned when the end of EML file is reached."""
+        if logging_mode == LoggingMode.CONSOLE:
             Logger.set_configuration(LoggingMode.CONSOLE)
-        else:
+        elif logging_mode == LoggingMode.FILE:
             Logger.set_configuration(LoggingMode.FILE, TargetLoggingFolder)
 
     def __set_newline_value(self):
@@ -100,7 +102,7 @@ class MailReader:
                 message.IsMultiPart = False
                 complete_body = str()
                 line = self.__get_next_line()
-                while line is not str():
+                while line is not str() and line != self.__EndOfFile:
                     if complete_body == str():
                         complete_body = line
                     else:
@@ -132,7 +134,7 @@ class MailReader:
                         if not BoundaryFound:
                             self.__parse_entity_body(message, complete_body)
                         break
-                    elif (BoundaryFound and line == BoundaryEnd) or line == "EOF":
+                    elif (BoundaryFound and line == BoundaryEnd) or line == self.__EndOfFile:
                         break
                     else:
                         if complete_body == str():
@@ -155,48 +157,50 @@ class MailReader:
             header = header.strip()
             if header.strip().find(":") == -1:
                 raise IncompleteHeaderError(header, self.__NextLineIndex)
-            rValue = (header.split(":")[1]).strip()
-            if header.startswith("From"):
+            colon_index = header.strip().find(":")
+            rValue = header[colon_index + 1:]
+            rValue = rValue.strip()
+            if header.lower().startswith("from"):
                 mail_address = MailAddress()
                 mail_address.parse(rValue)
                 message.From = mail_address
-            elif header.startswith("To"):
+            elif header.lower().startswith("to"):
                 rValue = rValue.replace(",", ";")
                 emails = rValue.split(";")
                 for email in emails:
                     message.add_mail_address("To", email)
-            elif header.startswith("CC"):
+            elif header.lower().startswith("cc"):
                 rValue = rValue.replace(",", ";")
                 emails = rValue.split(";")
                 for email in emails:
                     message.add_mail_address("Cc", email)
-            elif header.startswith("BCC"):
+            elif header.lower().startswith("bcc"):
                 rValue = rValue.replace(",", ";")
                 emails = rValue.split(";")
                 for email in emails:
                     message.add_mail_address("Bcc", email)
-            elif header.startswith("Reply-To"):
+            elif header.lower().startswith("reply-to"):
                 rValue = rValue.replace(",", ";")
                 emails = rValue.split(";")
                 for email in emails:
                     message.add_mail_address("ReplyTo", email)
-            elif header.startswith("Message-ID"):
+            elif header.lower().startswith("message-id"):
                 message.MessageID = rValue
-            elif header.startswith("MIME-Version"):
+            elif header.lower().startswith("mime-version"):
                 message.MimeVersion = rValue
-            elif header.startswith("Subject"):
+            elif header.lower().startswith("subject"):
                 message.Subject = TextEncoding.decode_header(rValue)
-            elif header.startswith("Date"):
+            elif header.lower().startswith("date"):
                 message.Date = rValue
-            elif header.startswith("Content-Type"):
+            elif header.lower().startswith("content-type"):
                 message.set_content_type(rValue)
-            elif header.startswith("Content-Transfer-Encoding"):
+            elif header.lower().startswith("content-transfer-encoding"):
                 message.set_content_transfer_encoding(rValue)
-            elif header.startswith("Content-Description"):
+            elif header.lower().startswith("content-description"):
                 message.ContentDescription = rValue
-            elif header.startswith("Content-Disposition"):
+            elif header.lower().startswith("content-disposition"):
                 message.set_content_disposition(rValue)
-            elif header.startswith("Content-ID"):
+            elif header.lower().startswith("content-id"):
                 message.ContentID = rValue.lstrip("<").rstrip(">")
             else:
                 lValue = (header.split(":")[0]).strip()
@@ -216,7 +220,7 @@ class MailReader:
                 NextLine = NextLine.strip(self.__NewLineCharacter)
                 self.__NextLineIndex = self.__NextLineIndex + 1
             else:
-                NextLine = "EOF"
+                NextLine = self.__EndOfFile
         except Exception as ex:
             Logger.logentry(f"An error occurred while fetching the next line to be processed: {ex}", LoggingLevel.ERROR)
 
@@ -247,10 +251,13 @@ class MailReader:
         try:
             if message.ContentTransferEncoding == TransferEncoding.BASE64:
                 complete_body = complete_body.replace(self.__NewLineCharacter, "")
-                mail_attachment = MailAttachment()
-                mail_attachment.parse_values(TextEncoding.decode_base64_file(complete_body), message.ContentType, message.ContentDisposition, message.ContentID)
-                message.Attachments.append(mail_attachment)
-                message.Body = str()
+                if message.ContentType.MediaType.lower().startswith("application") or message.ContentType.MediaType.lower().startswith("image"):
+                    mail_attachment = MailAttachment()
+                    mail_attachment.parse_values(TextEncoding.decode_base64_file(complete_body), message.ContentType, message.ContentDisposition, message.ContentID)
+                    message.Attachments.append(mail_attachment)
+                    message.Body = str()
+                else:
+                    message.Body = TextEncoding.decode_base64_string(complete_body, message.ContentType.Charset)
             elif message.ContentTransferEncoding == TransferEncoding.QUOTED_PRINTABLE:
                 if message.EntityType == EntityType.TEXT:
                     message.Body = TextEncoding.decode_quoted_printable_string(complete_body, message.ContentType.Charset, False)

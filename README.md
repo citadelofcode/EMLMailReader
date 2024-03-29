@@ -1,6 +1,6 @@
 # EMLMailReader
 
-A Python library designed to analyze EML files and to extract details and attachments contained within. It captures various information from the email, such as attachments, sender address, recipient address, subject, body, and a comprehensive list of all headers in the EML file. The parsed information is exportable as a JSON object, and attachments can be conveniently downloaded to a specified local directory.
+This Python library streamlines the process of working with EML files. Effortlessly extract crucial details like sender and recipient information, subject lines, email bodies, and a complete list of headers. For in-depth analysis, export the parsed data in the widely-used JSON format. Additionally, the library provides the convenience of downloading any associated attachments directly to your local machine for further processing.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ pip install emlmailreader
 
 ## Example Usage
 
-Here's a sample code to leverage **EMLMailReader** in parsing an EML file and extracting information contained within.
+Here's a sample code to leverage **EMLMailReader** in parsing an EML file and extract information contained within.
 
 ```
 from EMLMailReader import MailReader, RxMailMessage

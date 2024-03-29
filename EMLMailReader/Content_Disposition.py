@@ -53,7 +53,7 @@ class ContentDisposition:
                 elif key.lower().strip() == "modification-date":
                     self.ModificationDate = value.strip()
                 else:
-                    raise Exception("Invalid parameter present in Content-Disposition header")
+                    continue
         else:
             self.DispositionType = ContentDispositionString.strip()
 

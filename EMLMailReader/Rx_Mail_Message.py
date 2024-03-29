@@ -35,10 +35,6 @@ class RxMailMessage:
         """Content-Transfer-Encoding of MIME part."""
         self.Headers = dict()
         """List of all headers present in the MIME part."""
-        self.HeadersEncoding = str()
-        """Encoding used in Headers present in the MIME part."""
-        self.BodyEncoding = str()
-        """Encoding used in body of the MIME part."""
         self.MessageID = str()
         """'Message-ID' header value."""
         self.IsMultiPart = False
@@ -139,18 +135,12 @@ class RxMailMessage:
         final_object.update({
             "From": str(self.From),
             "Subject": self.Subject,
-            "Headers-Encoding": self.HeadersEncoding,
-            "Body-Encoding": self.BodyEncoding,
             "Message-ID": self.MessageID,
             "IsMultiPart": self.IsMultiPart,
             "Mime-Version": self.MimeVersion,
             "Date": self.Date,
-            "Content-Description": self.ContentDescription,
-            "Entity-Type": self.EntityType.name,
-            "Content-ID": self.ContentID,
             "Headers": self.Headers,
             "Content-Type": str(self.ContentType),
-            "Content-Disposition": str(self.ContentDisposition),
             "To": str(self.To),
             "Cc": str(self.Cc),
             "Bcc": str(self.Bcc),

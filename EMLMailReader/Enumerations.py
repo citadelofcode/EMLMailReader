@@ -34,3 +34,4 @@ class LoggingMode(Enum):
     """Enumeration containing the different modes of logging available for a module."""
     CONSOLE = 1
     FILE = 2
+    NONE = 3

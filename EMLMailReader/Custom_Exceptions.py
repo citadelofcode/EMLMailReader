@@ -37,3 +37,14 @@ class FolderNotAvailableError(Exception):
 
     def __str__(self):
         return f"Error occurred on line {self.__traceback__.tb_lineno}:> Folder - '{self.folderPath}' is either not accessible or does not exist.."
+
+
+class InvalidPropertyError(Exception):
+    """
+    A custom exception class to report when an invalid property is provided for an object.
+    """
+    def __init__(self, name: str):
+        self.property_name = name
+
+    def __str__(self):
+        return f"Invalid property '{self.property_name}' found."

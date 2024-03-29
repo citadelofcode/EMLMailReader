@@ -1,0 +1,72 @@
+{
+    "Test-Email-One": {
+      "From": "Mahesh Kumaar Balaji <mk.balaji@gmail.com>",
+      "Subject": "Chris made appointment with Kenyon to prepare for deposition",
+      "Message-ID": "<f344d1b5-26f6-bc3f-23bc-787257a1a440@gmail.com>",
+      "IsMultiPart": false,
+      "Mime-Version": "1.0",
+      "Date": "Wed, 20 Sep 2017 16:43:13 -0400",
+      "Content-Type": "text/plain; charset=utf-8",
+      "To": "the-bungalow@googlegroups.com <the-bungalow@googlegroups.com>;Mahesh Kumaar Balaji <mk.balaji@gmail.com>",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 0
+    },
+    "Test-Email-Two": {
+      "From": "Ted Chadwick <ted.chadwick@gmail.com>",
+      "Subject": "Fracassa call 11/1",
+      "Message-ID": "<53EFDC03-4FAC-4065-B00F-114186791D54@gmail.com>",
+      "IsMultiPart": false,
+      "Mime-Version": "1.0",
+      "Date": "Mon, 1 Nov 2021 10:18:31 -0400",
+      "Content-Type": "text/plain; charset=utf-8",
+      "To": "The Bungalow <the-bungalow@googlegroups.com>",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 0
+    },
+    "Test-Email-Three": {
+      "From": "Ted Chadwick <ted.chadwick@gmail.com>",
+      "Subject": "document checklist for 189 Beavertail Rd",
+      "Message-ID": "<CADBsX-Jqhj_0TvjwrRZvDLzFAmhJFgbw9Qk7iaZ1xjeZsT4V7w@mail.gmail.com>",
+      "IsMultiPart": true,
+      "Mime-Version": "1.0",
+      "Date": "Mon, 27 May 2019 09:54:57 -0400",
+      "Content-Type": "multipart/mixed; charset=us-ascii",
+      "To": "kelly@naccaratofracassa.com",
+      "Cc": "Peter Chadwick <peterchadwick@outlook.com>;GEORGE CHADWICK <gwchadwick2@msn.com>;Christopher Sorlien <chris.sorlien@gmail.com>;Eric Sorlien <rericsorlien@gmail.com>;Sarah Sorlien <sarahsorlien@gmail.com>",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 3
+    },
+    "Test-Email-Four": {
+      "From": "Microsoft <microsoft-noreply@microsoft.com>",
+      "Subject": "View your Microsoft 365 Business Basic invoice",
+      "Message-ID": "<f184733e-9bbd-449a-bc93-610543f34fac@az.westus3.microsoft.com>",
+      "IsMultiPart": true,
+      "Mime-Version": "1.0",
+      "Date": "Mon, 18 Mar 2024 16:02:04 +0000",
+      "Content-Type": "multipart/mixed; charset=us-ascii",
+      "To": "maheshkumaar.balaji@mkbdgs.com",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 1
+    },
+    "Test-Email-Five": {
+      "From": "Mahesh Kumaar Balaji <maheshkumaar.balaji@outlook.com>",
+      "Subject": "Test-Email-5",
+      "Message-ID": "<TY3P286MB27238431EA4EE3F05821CDD7E4312@TY3P286MB2723.JPNP286.PROD.OUTLOOK.COM>",
+      "IsMultiPart": true,
+      "Mime-Version": "1.0",
+      "Date": "Fri, 22 Mar 2024 22:52:24 +0000",
+      "Content-Type": "multipart/mixed; charset=us-ascii",
+      "To": "Mahesh Kumaar Balaji <maheshkumaar.balaji@mkbdgs.com>",
+      "Cc": "",
+      "Bcc": "",
+      "Reply-To": "",
+      "Attachment-Count": 1
+    }
+}

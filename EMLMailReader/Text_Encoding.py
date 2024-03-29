@@ -53,8 +53,11 @@ class TextEncoding:
             :param encoded_string: The string to be decoded.
             :returns: the decoded string.
         """
+        encoded_string = encoded_string.strip()
         if encoded_string.startswith("=?"):
-            string_parts = encoded_string.lstrip("=?").rstrip("?=").split("?")
+            encoded_string = encoded_string[2:]
+            encoded_string = encoded_string[0: len(encoded_string) - 2]
+            string_parts = encoded_string.split("?")
             if (string_parts[1]).strip().upper() == "Q":
                 decoded_string = TextEncoding.decode_quoted_printable_string(string_parts[2], string_parts[0], True)
             elif (string_parts[1]).strip().upper() == "B":
