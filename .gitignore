@@ -161,4 +161,4 @@ cython_debug/
 # Add the folders - 'Input' and 'Output' used in unit testing of the project.
 Input/
 Output/
-.DS_STORE
+.DS_Store
