@@ -119,4 +119,4 @@ All modules mentioned above are present in the Standard Python library and thus,
 
 ## Documentation
 
-For complete documentation, check **documentation.md** file of this repository.
+For complete documentation, check [Documentation](/documentation.md) file of this repository.
