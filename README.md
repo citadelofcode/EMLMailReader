@@ -6,7 +6,6 @@ This Python library streamlines the process of working with EML files. Effortles
 
 - [Installation](#installation)
 - [Example Usage](#example-usage)
-- [Modules Used](#modules-used)
 - [Documentation](#documentation)
 
 ## Installation
@@ -105,18 +104,6 @@ In this context, the term "COMPLETE_EML_FILE_PATH" indicates the complete path o
 }
 ```
 
-## Modules Used
-
-Given below are the list of all the modules used in the *EMLMailReader* library.
-
-- **os** - To perform operating system file path manipulations.
-- **logging** - To generate logs for EML file processing.
-- **quopri** - To decode quoted-printable encoded string.
-- **base64** - To decode base64 encoded string.
-- **json** - To convert a python object to JSON and vice versa.
-
-All modules mentioned above are present in the Standard Python library and thus, do not require explicit installation or configuration.
-
 ## Documentation
 
-For complete documentation, check [Documentation](/documentation.md) file of this repository.
+For complete documentation, refer the [Documentation](https://github.com/mkbworks/EMLMailReader/blob/main/documentation.md) file for this package.

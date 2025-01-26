@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "emlmailreader"
-version = "1.0.1"
+version = "1.0.2"
 description = "Parse EML file and export the information extracted as JSON."
 readme = "README.md"
 authors = [{ name = "Mahesh Kumaar Balaji", email = "maheshkumaar.balaji@outlook.com" }]
@@ -22,5 +22,5 @@ requires-python = ">=3.12"
 packages = ["EMLMailReader"]
 
 [project.urls]
-Homepage = "https://github.com/maheshkumaarbalaji/EMLMailReader"
-Issues = "https://github.com/maheshkumaarbalaji/EMLMailReader/issues"
+Homepage = "https://github.com/mkbworks/EMLMailReader"
+Issues = "https://github.com/mkbworks/EMLMailReader/issues"
