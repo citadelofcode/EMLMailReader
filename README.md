@@ -1,5 +1,7 @@
 # EMLMailReader
 
+<img src="https://f27c53a3.citadelofcode.pages.dev/logos/emlmailreader.png" style="border-radius:50%" align="right" width="159px" alt="EMLMailReader logo">
+
 This Python library streamlines the process of working with EML files. Effortlessly extract crucial details like sender and recipient information, subject lines, email bodies, and a complete list of headers. For in-depth analysis, export the parsed data in the widely-used JSON format. Additionally, the library provides the convenience of downloading any associated attachments directly to your local machine for further processing.
 
 ## Table of Contents
