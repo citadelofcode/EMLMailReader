@@ -22,9 +22,9 @@ pip install emlmailreader
 
 Here's a sample code to leverage **EMLMailReader** in parsing an EML file and extract information contained within.
 
-```
+```python
 from EMLMailReader import MailReader, RxMailMessage
-  
+
 reader: MailReader = MailReader()
 message = reader.get_email("COMPLETE_EML_FILE_PATH")
 if isinstance(message, RxMailMessage):
@@ -32,7 +32,7 @@ if isinstance(message, RxMailMessage):
     print(json_string)
 ```
 
-In this context, the term "COMPLETE_EML_FILE_PATH" indicates the complete path of the .EML file intended for processing. Running this code will output a JSON string resembling the one provided below.
+In this context, the term `COMPLETE_EML_FILE_PATH` indicates the complete path of the .EML file intended for processing. Running this code will output a JSON string resembling the one provided below.
 
 ```
 {
@@ -108,4 +108,4 @@ In this context, the term "COMPLETE_EML_FILE_PATH" indicates the complete path o
 
 ## Documentation
 
-For complete documentation, refer the [Documentation](https://github.com/mkbworks/EMLMailReader/blob/main/documentation.md) file for this package.
+For complete documentation, refer the [Documentation](documentation.md) file for this package.
