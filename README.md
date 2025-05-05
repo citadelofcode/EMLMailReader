@@ -20,7 +20,7 @@ pip install emlmailreader
 
 ## Example Usage
 
-Here's a sample code to leverage **EMLMailReader** in parsing an EML file and extract information contained within.
+Here's a sample code to leverage `EMLMailReader` in parsing an EML file and extract information contained within.
 
 ```python
 from EMLMailReader import MailReader, RxMailMessage
@@ -34,7 +34,7 @@ if isinstance(message, RxMailMessage):
 
 In this context, the term `COMPLETE_EML_FILE_PATH` indicates the complete path of the .EML file intended for processing. Running this code will output a JSON string resembling the one provided below.
 
-```
+```json
 {
     "From": "Mahesh Kumaar Balaji <maheshkumaar.balaji@outlook.com>",
     "Subject": "Test-Email-5",
