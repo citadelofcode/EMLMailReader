@@ -7,4 +7,4 @@ A python library that streamlines the process of working with EML files by extra
 
 ## Documentation
 
-The technical documentation for the library is available [here](https://github.com/citadelofcode/EMLMailReader/wiki/EMLMailReader).
+The technical documentation for the library is available [here](https://github.com/citadelofcode/EMLMailReader/wiki).
